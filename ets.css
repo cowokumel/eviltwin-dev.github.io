@@ -1,0 +1,72 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Neucha';
+  background: black;
+  color: #eee;
+  height: 100%;
+  width: 100%;
+  max-width: none;
+}
+a{
+	color:white;
+}
+table{
+  border: 10px solid white;
+}
+pre{
+  width:96%; 
+  height:50%;
+  overflow: auto;
+  padding:5px 7px;
+  white-space: pre-wrap;
+  flex-grow: 1;
+  font-family:Neucha;
+}
+input[type=file] {
+  width: 100%;
+  background: black;
+  padding: 8px 10px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+}
+input[type=text] {
+  width: 60%;
+  color: white;
+  background: black;
+  margin: 6px 0;
+  padding:5px 10px;
+  box-sizing: border-box;
+  border: none;
+}
+input[type=password] {
+  width: 50%;
+  color: white;
+  background: black;
+  margin: 6px 0;
+  padding:5px 10px;
+  box-sizing: border-box;
+  border: none;
+}
+textarea{
+  width: 100%;
+  color: white;
+  background: black;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: none;
+}
+.etd{
+background:white;
+color:black;
+border-top:0;
+border-left:0;
+border-right:0;
+border-bottom:5px solid grey;
+padding:5px 10px;
+text-decoration:none;
+font-family:sans-serif;
+font-size:11pt;
+}
